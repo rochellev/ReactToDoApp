@@ -32,7 +32,7 @@ class App extends Component {
     })
   }
   addItem = e => {
-    e.preventDefault()
+    e.preventDefault()  // prevents reload on submitting the form
     const newItem = this.state.currentItem
     if (newItem.text !== '') {
       const items = [...this.state.items, newItem]
@@ -52,6 +52,8 @@ class App extends Component {
           currentItem={this.state.currentItem}
         />
         <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
+        pip
+        <p style={{ textDecorationLine: 'line-through' }}> test cross me plz </p>
       </div>
     )
   }
